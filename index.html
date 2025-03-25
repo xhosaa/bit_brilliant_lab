@@ -1,7 +1,208 @@
-<p>Hello 大家好</p>
-<p>我是aaa，这是我的个人网站。 </p>
-<p>很高兴你来到这里, 你可以在以下的网站找到我</p>
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R.C. for BCI & BII, BIT</title>
+    <style>
+        /* 导航栏样式 */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.8rem 4rem;
+            background: linear-gradient(90deg, #2c3e50, #3498db);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
 
-<ul>
-  <li> <a href="https://www.zhihu.com">知乎</a> </li>
-</ul>
+        .nav-brand .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .nav-brand img {
+            height: 36px;
+            width: auto;
+            margin-right: 12px;
+        }
+
+        .lab-name {
+            color: white;
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            align-items: center;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 400;
+            transition: all 0.2s ease;
+            padding: 0.5rem 0;
+        }
+
+        .nav-link:hover {
+            color: white;
+        }
+
+        .lang-btn {
+            padding: 6px 16px;
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            border-radius: 20px;
+            background-color: transparent;
+            color: white;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            margin-left: 1.5rem;
+            font-size: 0.9rem;
+        }
+
+        /* 轮播图样式 */
+        .carousel {
+            position: relative;
+            width: 100%;
+        }
+
+        .carousel-slides {
+            position: relative;
+            width: 100%;
+            padding-bottom: 40%;
+            overflow: hidden;
+        }
+
+        .carousel-slides img {
+            width: 100%;
+            height: auto;
+        }
+
+        /* 页脚样式 */
+        .footer {
+            background: linear-gradient(90deg, #2c3e50, #3498db);
+            padding: 40px 0;
+            color: #fff;
+            margin-top: auto;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 40px;
+        }
+
+        .footer-section {
+            flex: 1;
+            padding: 0 20px;
+        }
+
+        .footer-section h3 {
+            color: #fff;
+            font-size: 18px;
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+
+        .footer-section p {
+            color: rgba(255, 255, 255, 0.9);
+            margin: 10px 0;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        /* 响应式设计 */
+        @media screen and (max-width: 768px) {
+            .navbar {
+                padding: 0.8rem 1.5rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-section {
+                margin-bottom: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-brand">
+            <a href="/" class="logo">
+                <img src="assets/logo.png" alt="Lab Logo">
+                <span class="lab-name">R.C. for BCI & BII, BIT</span>
+            </a>
+        </div>
+
+        <div class="nav-links">
+            <a href="/" class="nav-link">首页</a>
+            <a href="fields.html" class="nav-link">研究方向</a>
+            <a href="team.html" class="nav-link">团队成员</a>
+            <a href="publications.html" class="nav-link">发表文章</a>
+            <a href="join.html" class="nav-link">加入我们</a>
+            <button class="lang-btn" onclick="toggleLanguage()">English</button>
+        </div>
+    </nav>
+
+    <!-- 轮播图 -->
+    <div class="carousel">
+        <div class="carousel-slides">
+            <img src="assets/i1.jpg" alt="实验室图片1">
+        </div>
+    </div>
+
+    <!-- 页脚 -->
+    <div class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>关于我们</h3>
+                <p>开发: zz、m</p>
+                <p>成员: </p>
+            </div>
+
+            <div class="footer-section">
+                <h3>联系方式</h3>
+                <p>运营单位: 脑机接口与类脑智能研究中心</p>
+                <p>联系地址: 北京理工大学中关村校区中心教学楼1401</p>
+                <p>联系邮箱: 1433927257@qq.com</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>快速链接</h3>
+                <p>问题反馈</p>
+                <p>著作权申诉</p>
+                <p>举报邮箱: 1433927257@qq.com</p>
+            </div>
+
+            <div class="footer-section logo-section">
+                <img src="assets/logo.png" alt="logo">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleLanguage() {
+            // 语言切换功能预留
+            const langBtn = document.querySelector('.lang-btn');
+            if (langBtn.textContent === 'English') {
+                langBtn.textContent = '中文';
+            } else {
+                langBtn.textContent = 'English';
+            }
+        }
+    </script>
+</body>
+</html>

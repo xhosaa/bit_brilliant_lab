@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>教师详情 - 脑机接口与类脑智能研究中心</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* 全局样式 */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f7fa;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* 导航栏样式 */
+        .navbar {
+            background: linear-gradient(90deg, #2c3e50, #3498db);
+            padding: 0.8rem 4rem;
+            color: white;
+        }
+
+        .nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 2rem;
+            opacity: 0.9;
+        }
+
+        /* 个人信息头部 */
+        .profile-header {
+            background: linear-gradient(135deg, #1a237e, #3949ab);
+            padding: 60px 0;
+            color: white;
+            margin-bottom: 30px;
+        }
+
+        .profile-info {
+            display: flex;
+            align-items: flex-start;
+            gap: 40px;
+        }
+
+        .avatar img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 4px solid rgba(255, 255, 255, 0.2);
+            object-fit: cover;
+        }
+
+        .info {
+            text-align: left;
+        }
+
+        .info h1 {
+            margin: 0;
+            font-size: 36px;
+            font-weight: 600;
+        }
+
+        .info .title {
+            font-size: 20px;
+            margin: 10px 0;
+            opacity: 0.9;
+        }
+
+        .info .contact {
+            margin-top: 15px;
+            text-align: left;
+        }
+
+        .info .contact div {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 5px 0;
+        }
+
+        .info .contact a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .info .contact a:hover {
+            text-decoration: underline;
+        }
+
+        /* 主要内容区域 */
+        .main-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .card, .side-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+            padding: 25px;
+            margin-bottom: 25px;
+        }
+
+        h2 {
+            margin: 0 0 20px;
+            font-size: 24px;
+            color: #1a237e;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #e8eaf6;
+        }
+
+        h3 {
+            color: #1a237e;
+            font-size: 20px;
+            margin: 0 0 15px;
+        }
+
+        .bio, .publication-text, .content-text {
+            line-height: 1.8;
+            color: #37474f;
+            text-align: justify;
+        }
+
+        .research-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tag {
+            background: #e8eaf6;
+            color: #1a237e;
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        /* 页脚样式 */
+        .footer {
+            background: linear-gradient(90deg, #2c3e50, #3498db);
+            color: white;
+            padding: 40px 0;
+            margin-top: auto;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            padding: 0 2rem;
+        }
+
+        @media screen and (max-width: 768px) {
+            .profile-info {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                gap: 20px;
+            }
+
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+
+            .info .contact {
+                text-align: center;
+            }
+
+            .info .contact div {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="nav-brand">
+                    <span>R.C. for BCI & BII, BIT</span>
+                </div>
+                <div class="nav-links">
+                    <a href="index.html">首页</a>
+                    <a href="research.html">研究</a>
+                    <a href="team.html">团队</a>
+                    <a href="publications.html">论文</a>
+                    <a href="join.html">加入我们</a>
+                    <a href="en.html">English</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 个人信息头部 -->
+    <div class="profile-header">
+        <div class="container">
+            <div class="profile-info">
+                <div class="avatar">
+                    <img src="assets/teachers/wuxia.jpg" alt="邬霞">
+                </div>
+                <div class="info">
+                    <h1>邬霞</h1>
+                    <div class="title">教授、博士生导师</div>
+                    <div class="contact">
+                        <div>
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:wuxia@bit.edu.cn">wuxia@bit.edu.cn</a>
+                        </div>
+                        <div>
+                            <i class="fas fa-building"></i>
+                            <span>北京理工大学中关村校区中心教学楼1401</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 主要内容区 -->
+    <div class="container">
+        <div class="main-content">
+            <!-- 左侧内容 -->
+            <div class="content-left">
+                <!-- 个人简介 -->
+                <section class="card">
+                    <h2>个人简介</h2>
+                    <div class="bio">
+                        邬霞，博士，教授，博士生导师。2009年于北京理工大学获得博士学位，2009年至2011年在美国佐治亚大学从事博士后研究工作。现任北京理工大学计算机学院教授，脑机接口与类脑智能研究中心主任。主要研究方向为人工智能与脑科学，在Nature子刊、MedIA、IEEE TPAMI等国内外顶级期刊和会议上发表学术论文100余篇，授权国家发明专利20余项。主持国家杰出青年科学基金、国家重点研发计划等国家级项目10余项。
+                    </div>
+                </section>
+
+                <!-- 发表论文 -->
+                <section class="card">
+                    <h2>学术成果</h2>
+                    <div class="publication-text">
+                        [代表性论文]
+                        1. Qixin Wang, Chaoqiong Fan, Tianyuan Jia, Yuyang Han, Xia Wu*. ND-MRM: Neuronal Diversity Inspired Multisensory Recognition Model, Thirty-Eighth AAAI Conference on Artificial Intelligence, 2024.
+                        2. Ziyu Li, Qing Li, Zhiyuan Zhu, Zhongyi Hu, Xia Wu*. Multi-Scale Spatio-Temporal Fusion with Adaptive Brain Topology Learning for fMRI Based Neural Decoding. IEEE Journal of Biomedical and Health Informatics, 2024, 28(1): 262-272.
+                    </div>
+                </section>
+
+                <!-- 科研项目 -->
+                <section class="card">
+                    <h2>科研项目</h2>
+                    <div class="content-text">
+                        [1] 国家杰出青年科学基金项目《面向脑认知的类脑智能计算模型研究》（项目编号：62325604），260万元，主持；
+                        [2] 国家重点研发计划《面向脑认知的类脑智能计算模型研究》（项目编号：2021YFA1200604），2021/12-2026/11，1088万元，主持；
+                    </div>
+                </section>
+            </div>
+
+            <!-- 右侧信息栏 -->
+            <div class="content-right">
+                <!-- 研究方向 -->
+                <section class="side-card">
+                    <h3>研究方向</h3>
+                    <div class="research-tags">
+                        <span class="tag">人工智能</span>
+                        <span class="tag">脑科学</span>
+                        <span class="tag">类脑计算</span>
+                        <span class="tag">脑机接口</span>
+                    </div>
+                </section>
+
+                <!-- 获奖情况 -->
+                <section class="side-card">
+                    <h3>获奖情况</h3>
+                    <div class="content-text">
+                        2023年，国家杰出青年科学基金项目支持
+                        2021年，茅以升科学技术奖 北京青年科技奖
+                        2021年，电子学会"优秀科技工作者"
+                        2020年，吴文俊人工智能科学技术奖自然科学 一等奖
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <p>联系方式<p>
+                <p>运营单位：脑机接口与类脑智能研究中心</p>
+                <p>联系地址：北京理工大学中关村校区中心教学楼1401</p>
+                <p>联系邮箱：1433927257@qq.com</p>
+            </div>
+            <div class="footer-section">
+                <p>快速链接<p>
+                <p>问题反馈</p>
+                <p>著作权申诉</p>
+                <p>举报邮箱：1433927257@qq.com</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

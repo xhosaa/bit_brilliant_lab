@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>团队 - 脑机接口与类脑智能研究中心</title>
+    <style>
+        /* 全局样式 */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+
+        /* 导航栏样式 */
+        .navbar {
+            background: linear-gradient(90deg, #2c3e50, #3498db);
+            padding: 0.8rem 4rem;
+            color: white;
+        }
+
+        .nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 2rem;
+            opacity: 0.9;
+        }
+
+        /* 团队页面样式 */
+        .team-container {
+            width: 90%;
+            margin: 0 auto;
+            padding: 20px 0 80px;
+        }
+
+        .title-box {
+            text-align: center;
+            font-size: 28px;
+            font-weight: 500;
+            line-height: 48px;
+            margin-bottom: 60px;
+            color: #2c3e50;
+            position: relative;
+        }
+
+        .title-box::after {
+            content: "";
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, #4553cd, #7986cb);
+        }
+
+        .member-section {
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-size: 24px;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            padding-left: 15px;
+            border-left: 4px solid #4553cd;
+        }
+
+        .members-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+            padding: 20px;
+        }
+
+        .member-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .member-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .member-avatar {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .member-info {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .member-info h3 {
+            margin: 0;
+            font-size: 18px;
+            color: #2c3e50;
+        }
+
+        .member-info p {
+            margin: 5px 0 0;
+            font-size: 14px;
+            color: #666;
+        }
+
+        /* 页脚样式 */
+        .footer {
+            background: linear-gradient(90deg, #2c3e50, #3498db);
+            color: white;
+            padding: 40px 0;
+            margin-top: auto;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            padding: 0 2rem;
+        }
+
+        @media screen and (max-width: 768px) {
+            .navbar {
+                padding: 0.8rem 1.5rem;
+            }
+
+            .team-container {
+                width: 95%;
+            }
+
+            .members-grid {
+                padding: 10px;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="nav-brand">
+                <span>R.C. for BCI & BII, BIT</span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">首页</a>
+                <a href="research.html">研究</a>
+                <a href="team.html">团队</a>
+                <a href="publications.html">论文</a>
+                <a href="join.html">加入我们</a>
+                <a href="en.html">English</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主要内容 -->
+    <div class="team-container">
+        <div class="title-box">团队成员</div>
+        
+        <!-- 导师部分 -->
+        <div class="member-section">
+            <h2 class="section-title">导师</h2>
+            <div class="members-grid">
+                <div class="member-card" onclick="window.location.href='teacher_detail.html?id=wuxia'">
+                    <img src="assets/teachers/picture1.jpg" alt="邬霞" class="member-avatar">
+                    <div class="member-info">
+                        <h3>邬霞</h3>
+                        <p>博士生导师</p>
+                    </div>
+                </div>
+
+                <div class="member-card" onclick="window.location.href='teacher_detail.html?id=liqing'">
+                    <img src="assets/teachers/picture2.png" alt="李晴" class="member-avatar">
+                    <div class="member-info">
+                        <h3>李晴</h3>
+                        <p>硕士生导师</p>
+                    </div>
+                </div>
+
+                <div class="member-card" onclick="window.location.href='teacher_detail.html?id=lixiuxing'">
+                    <img src="assets/teachers/lixiuxing.jpg" alt="李秀星" class="member-avatar">
+                    <div class="member-info">
+                        <h3>李秀星</h3>
+                        <p>硕士生导师</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 博士后部分 -->
+        <div class="member-section">
+            <h2 class="section-title">博士后</h2>
+            <div class="members-grid">
+                <div class="member-card" onclick="window.location.href='member_detail.html?id=liziyv'">
+                    <div class="member-info">
+                        <h3>李子遇</h3>
+                        <p>博士后</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>联系方式</h3>
+                <p>运营单位：脑机接口与类脑智能研究中心</p>
+                <p>联系地址：北京理工大学中关村校区中心教学楼1401</p>
+                <p>联系邮箱：1433927257@qq.com</p>
+            </div>
+            <div class="footer-section">
+                <h3>快速链接</h3>
+                <p>问题反馈</p>
+                <p>著作权申诉</p>
+                <p>举报邮箱：1433927257@qq.com</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

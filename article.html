@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>脑机接口与类脑智能研究中心</title>
+    <style>
+        /* 全局样式 */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* 导航栏样式 */
+        .navbar {
+            background: linear-gradient(90deg, #2c3e50, #3498db);
+            padding: 1rem 4rem;
+            color: white;
+        }
+
+        .nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 2rem;
+            opacity: 0.9;
+        }
+
+        .nav-links a:hover {
+            opacity: 1;
+        }
+
+        /* 主要内容样式 */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .section {
+            margin-bottom: 3rem;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 0.5rem;
+        }
+
+        /* 团队成员样式 */
+        .member-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .member-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+        }
+
+        .member-name {
+            font-size: 1.5rem;
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+
+        .member-title {
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        /* 页脚样式 */
+        .footer {
+            background: linear-gradient(90deg, #2c3e50, #3498db);
+            color: white;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            padding: 0 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 1rem;
+            }
+
+            .container {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="nav-brand">
+                <span>R.C. for BCI & BII, BIT</span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">首页</a>
+                <a href="research.html">研究</a>
+                <a href="team.html">团队</a>
+                <a href="publications.html">论文</a>
+                <a href="join.html">加入我们</a>
+                <a href="en.html">English</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主要内容 -->
+    <div class="container">
+        <!-- 实验室简介 -->
+        <section class="section">
+            <h2 class="section-title">实验室简介</h2>
+            <p>面向国家重大需求，围绕人工智能与脑科学，致力于运用人工智能技术理论和方法，挖掘人脑特征，探索认知功能脑机制，同时受益于脑科学探究中获得的启发与灵感，开发新的人工智能理论方法，将脑机接口技术赋能于工业制造、医疗、军事。</p>
+        </section>
+
+        <!-- 重要信息 -->
+        <section class="section">
+            <h2 class="section-title">重要信息</h2>
+            <p>北京理工大学计算机学院脑机接口与类脑智能研究中心每年招收博士研究生和硕士研究生多名，欢迎感兴趣的同学联系我们！</p>
+        </section>
+
+        <!-- 团队成员 -->
+        <section class="section">
+            <h2 class="section-title">团队成员</h2>
+            <h3>导师</h3>
+            <div class="member-grid">
+                <!-- 邬霞 -->
+                <div class="member-card">
+                    <h4 class="member-name">邬霞</h4>
+                    <p class="member-title">教授、博士生导师</p>
+                    <p>邮箱：wuxia@bit.edu.cn</p>
+                    <p>办公室：北京市海淀区中关村南大街5号北京理工大学</p>
+                </div>
+                
+                <!-- 李秀星 -->
+                <div class="member-card">
+                    <h4 class="member-name">李秀星</h4>
+                    <p class="member-title">特别副研究员、硕士研究生导师</p>
+                    <p>邮箱：xxl@bit.edu.cn</p>
+                    <p>办公室：北京理工大学中心教学楼14层1402办公室</p>
+                </div>
+
+                <!-- 李晴 -->
+                <div class="member-card">
+                    <h4 class="member-name">李晴</h4>
+                    <p class="member-title">助理教授、特别副研究员</p>
+                    <p>邮箱：liqing@bit.edu.cn</p>
+                    <p>办公室：北京理工大学中心教学楼1402</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>联系方式</h3>
+                <p>运营单位：脑机接口与类脑智能研究中心</p>
+                <p>联系地址：北京理工大学中关村校区中心教学楼1401</p>
+                <p>联系邮箱：1433927257@qq.com</p>
+            </div>
+            <div class="footer-section">
+                <h3>快速链接</h3>
+                <p>问题反馈</p>
+                <p>著作权申诉</p>
+                <p>举报邮箱：1433927257@qq.com</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
